@@ -2,14 +2,13 @@ import { useEffect, useState } from 'react';
 import { useActiveSection } from '@/hooks/useActiveSection';
 import { GithubIcon } from '@/components/icons/Icons';
 
-const SECTION_IDS = ['about', 'workflow', 'projects', 'identities', 'journey', 'skills', 'contact'];
+const SECTION_IDS = ['projects', 'about', 'skills', 'github', 'journey', 'contact'];
 const NAV_LINKS = [
-  { id: 'about', label: 'whoami' },
-  { id: 'workflow', label: 'workflow' },
   { id: 'projects', label: 'projects' },
-  { id: 'identities', label: 'identities' },
-  { id: 'journey', label: 'journey' },
+  { id: 'about', label: 'about' },
   { id: 'skills', label: 'skills' },
+  { id: 'github', label: 'activity' },
+  { id: 'journey', label: 'journey' },
   { id: 'contact', label: 'contact' },
 ] as const;
 
@@ -49,7 +48,7 @@ export function Navbar({ onToggleMenu, menuOpen }: NavbarProps) {
         </div>
 
         <a
-          href="https://github.com/tukuexe"
+          href="https://github.com/realximanta"
           target="_blank"
           rel="noopener noreferrer"
           className="nav-cta"

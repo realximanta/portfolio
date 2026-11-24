@@ -1,33 +1,19 @@
 import { Section } from '@/components/ui/Section';
 import { SectionLabel } from '@/components/ui/SectionLabel';
-import { Reveal } from '@/components/ui/Reveal';
-import { SkillBar } from '@/components/ui/SkillBar';
-import { skillSystems } from '@/data/skills';
+
+const groups = [
+  { name: 'Mobile development', detail: 'Native apps and local storage', tools: ['Kotlin', 'Android', 'Jetpack Compose', 'Material 3', 'Room', 'SQLite', 'DataStore'] },
+  { name: 'Backend & infrastructure', detail: 'APIs, services and deployments', tools: ['Go', 'Node.js', 'Express', 'Python', 'Docker', 'Cloudflare Workers', 'KV / R2', 'Render'] },
+  { name: 'Developer tooling', detail: 'Automation and publishing', tools: ['TypeScript', 'React', 'GitHub Actions', 'Telegram Bot API', 'PyPI', 'REST APIs', 'Git'] },
+];
 
 export function Skills() {
-  return (
-    <Section id="skills">
-      <Reveal>
-        <SectionLabel>$ inspect skills</SectionLabel>
-        <h2 className="section-title">Systems & Tools</h2>
-        <p className="section-sub">Familiarity indicators — not precise proficiency percentages.</p>
-      </Reveal>
-
-      <Reveal delay={1}>
-        <div className="skills-systems">
-          {skillSystems.map((system, i) => (
-            <div
-              key={system.title}
-              className={`skill-system reveal reveal-delay-${i + 1}`}
-            >
-              <h3>{system.title}</h3>
-              {system.skills.map((skill) => (
-                <SkillBar key={skill.name} name={skill.name} level={skill.level} />
-              ))}
-            </div>
-          ))}
-        </div>
-      </Reveal>
-    </Section>
-  );
+  return <Section id="skills">
+    <SectionLabel>Technical toolkit</SectionLabel>
+    <h2 className="section-title">Systems & tools.</h2>
+    <p className="section-sub">Technologies I use in the featured projects and this portfolio.</p>
+    <div className="skills-systems">{groups.map(group => <article className="skill-system" key={group.name}>
+      <h3>{group.name}</h3><p>{group.detail}</p><div className="project-tech">{group.tools.map(tool => <span key={tool}>{tool}</span>)}</div>
+    </article>)}</div>
+  </Section>;
 }

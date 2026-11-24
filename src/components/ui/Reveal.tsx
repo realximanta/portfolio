@@ -1,5 +1,4 @@
 import { ReactNode } from 'react';
-import { useReveal } from '@/hooks/useReveal';
 
 interface RevealProps {
   children: ReactNode;
@@ -8,13 +7,11 @@ interface RevealProps {
   as?: 'div' | 'section' | 'article';
 }
 
-export function Reveal({ children, delay = 0, className = '', as = 'div' }: RevealProps) {
-  const ref = useReveal<HTMLDivElement>();
-  const delayClass = delay ? `reveal-delay-${delay}` : '';
+export function Reveal({ children, className = '', as = 'div' }: RevealProps) {
   const Tag = as;
 
   return (
-    <Tag ref={ref as never} className={`reveal ${delayClass} ${className}`.trim()}>
+    <Tag className={className || undefined}>
       {children}
     </Tag>
   );

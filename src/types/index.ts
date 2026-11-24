@@ -2,6 +2,10 @@ export interface Project {
   id: string;
   number: string;
   name: string;
+  category: 'Android' | 'Full stack' | 'Developer tools';
+  mark: string;
+  accent: string;
+  links?: { label: string; url: string }[];
   description: string;
   tech: string[];
   github?: string;

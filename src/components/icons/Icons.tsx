@@ -3,6 +3,14 @@ interface IconProps {
   className?: string;
 }
 
+export function InstagramIcon({ size = 16, className }: IconProps) {
+  return <svg width={size} height={size} className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.6" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>;
+}
+
+export function XIcon({ size = 16, className }: IconProps) {
+  return <svg width={size} height={size} className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3l-5-7.3L5.5 22H2.3l8.1-9.3L2.7 2h6.5l4.5 6.6L18.9 2Zm-1.1 18h1.7L8.2 3.9H6.3L17.8 20Z"/></svg>;
+}
+
 export function GithubIcon({ size = 16, className }: IconProps) {
   return (
     <svg

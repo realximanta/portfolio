@@ -13,9 +13,9 @@ const TAGS = [
 
 const STATS = [
   { num: '3', lbl: 'GitHub Identities' },
-  { num: '6+', lbl: 'Featured Projects' },
+  { num: '9', lbl: 'Featured Projects' },
   { num: '2024', lbl: 'Started Building' },
-  { num: '∞', lbl: 'Debugging Cycles' },
+  { num: '10', lbl: 'Selected Repositories' },
 ];
 
 export function About() {

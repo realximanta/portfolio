@@ -1,15 +1,27 @@
 import { Section } from '@/components/ui/Section';
 import { SectionLabel } from '@/components/ui/SectionLabel';
 import { Reveal } from '@/components/ui/Reveal';
-import { GithubIcon, GlobeIcon, TelegramIcon } from '@/components/icons/Icons';
+import { GithubIcon, GlobeIcon, TelegramIcon, InstagramIcon, XIcon } from '@/components/icons/Icons';
 import { identities } from '@/data/identities';
 
 const CONTACT_LINKS = [
   {
     label: 'GitHub',
-    value: '@tukuexe',
-    url: 'https://github.com/tukuexe',
+    value: '@realximanta',
+    url: 'https://github.com/realximanta',
     icon: 'github' as const,
+  },
+  {
+    label: 'Instagram',
+    value: '@iximanta',
+    url: 'https://www.instagram.com/iximanta/',
+    icon: 'instagram' as const,
+  },
+  {
+    label: 'X',
+    value: '@realximanta',
+    url: 'https://x.com/realximanta',
+    icon: 'x' as const,
   },
   {
     label: 'Telegram',
@@ -53,6 +65,8 @@ export function Contact() {
               {link.icon === 'github' && <GithubIcon size={20} />}
               {link.icon === 'telegram' && <TelegramIcon size={20} />}
               {link.icon === 'web' && <GlobeIcon size={20} />}
+              {link.icon === 'instagram' && <InstagramIcon size={20} />}
+              {link.icon === 'x' && <XIcon size={20} />}
               <div>
                 <div className="cl-label">{link.label}</div>
                 <div className="cl-value">{link.value}</div>

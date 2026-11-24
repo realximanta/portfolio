@@ -2,6 +2,7 @@ import { KeyboardEvent, useEffect, useRef, useState } from 'react';
 import { Section } from '@/components/ui/Section';
 import { SectionLabel } from '@/components/ui/SectionLabel';
 import { Reveal } from '@/components/ui/Reveal';
+import { projects } from '@/data/projects';
 
 interface TermBlock {
   id: number;
@@ -23,15 +24,10 @@ const COMMANDS: Record<string, string> = {
 Self-taught developer
 Vibe Coder
 Builder of bots, APIs and automation systems`,
-  skills: `Languages:   Python, JavaScript, TypeScript, Kotlin, Java, HTML, CSS
+  skills: `Languages:   Python, Go, JavaScript, TypeScript, Kotlin
 Platforms:   GitHub, Telegram, Cloudflare, Render, Android, Termux
 Engineering: APIs, Automation, Bots, Serverless, Deployment, Debugging, CLI tools`,
-  projects: `[01] Cloudflare DNS Telegram Bot  —  github.com/realximanta/cf-telegram-bot
-[02] Auto Payment Verification API —  auto-payment.ximanta.xyz
-[03] Codebase Store Bot            —  t.me/codex_storebot
-[04] AI Model APIs                 —  github.com/realximanta/AI-Model-APIs
-[05] Hostly                        —  github.com/realximanta/Hostly
-[06] MP3X                          —  github.com/realtuku/mp3x`,
+  projects: projects.map(p => '[' + p.number + '] ' + p.name + ' — ' + p.github + (p.id === 'daymark' ? ' (backend: github.com/realximanta/daymark-app)' : '')).join('\n'),
   github: `Three identities, one developer:
   <span class="hlv">@realtuku</span>    — The Beginning (experimental archive)
   <span class="hlv">@realximanta</span> — The Builder (systems, APIs, automation)
@@ -40,7 +36,9 @@ Engineering: APIs, Automation, Bots, Serverless, Deployment, Debugging, CLI tool
 2025 — Telegram Bots, Python, Web Projects, APIs, Automation
 2026 — Cloudflare, Deployment, Android, Kotlin, Java, AI, Serverless
 NOW  — Building systems, understanding architecture, shipping`,
-  contact: `GitHub:   github.com/tukuexe
+  contact: `GitHub:   github.com/realximanta
+Instagram: instagram.com/iximanta
+X:        x.com/realximanta
 Telegram: t.me/codex_storebot
 Website:  www.ximanta.xyz`,
 };
@@ -83,7 +81,7 @@ export function Terminal() {
       return;
     }
 
-    if (COMMANDS[cmd]) {
+    if (Object.prototype.hasOwnProperty.call(COMMANDS, cmd)) {
       nextBlocks.push({ id: blockId++, output: COMMANDS[cmd], isCommand: false });
     } else {
       nextBlocks.push({

@@ -1,13 +1,12 @@
 import { useEffect } from 'react';
 
 const LINKS = [
-  { href: '#about', label: '01 // whoami' },
-  { href: '#workflow', label: '02 // workflow' },
-  { href: '#projects', label: '03 // projects' },
-  { href: '#identities', label: '04 // identities' },
-  { href: '#journey', label: '05 // journey' },
-  { href: '#skills', label: '06 // skills' },
-  { href: '#contact', label: '07 // contact' },
+  { href: '#projects', label: 'Projects' },
+  { href: '#about', label: 'About' },
+  { href: '#skills', label: 'Skills' },
+  { href: '#github', label: 'Activity' },
+  { href: '#journey', label: 'Journey' },
+  { href: '#contact', label: 'Contact' },
 ];
 
 interface MobileMenuProps {

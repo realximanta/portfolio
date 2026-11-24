@@ -34,15 +34,15 @@ export default function App() {
 
       <main>
         <Hero />
-        <Terminal />
-        <About />
-        <Workflow />
         <Projects />
-        <Identities />
-        <Journey />
+        <About />
         <Skills />
         <GitHubActivity />
+        <Workflow />
         <Architecture />
+        <Journey />
+        <Identities />
+        <Terminal />
         <Contact />
       </main>
 

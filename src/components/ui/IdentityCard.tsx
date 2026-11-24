@@ -6,13 +6,13 @@ interface IdentityCardProps {
   delay?: 0 | 1 | 2;
 }
 
-export function IdentityCard({ identity, delay = 0 }: IdentityCardProps) {
+export function IdentityCard({ identity }: IdentityCardProps) {
   return (
     <a
       href={identity.url}
       target="_blank"
       rel="noopener noreferrer"
-      className={`identity-card reveal reveal-delay-${delay}`}
+      className="identity-card"
     >
       <div className="identity-handle">
         <GithubIcon size={18} />

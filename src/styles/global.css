@@ -172,8 +172,7 @@
     .section {
       max-width: 1200px; margin: 0 auto;
       padding: 100px 24px;
-      content-visibility: auto;
-      contain-intrinsic-size: auto 600px;
+      scroll-margin-top: 84px;
     }
     .section-label {
       font-family: var(--font-mono);
@@ -201,8 +200,8 @@
 
     /* ========== REVEAL ANIMATIONS ========== */
     .reveal {
-      opacity: 0; transform: translateY(28px);
-      transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+      opacity: 1;
+      transform: none;
     }
     .reveal.visible { opacity: 1; transform: translateY(0); }
     .reveal-delay-1 { transition-delay: 0.08s; }

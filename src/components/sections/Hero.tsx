@@ -1,93 +1,31 @@
-import { MagneticButton } from '@/components/ui/MagneticButton';
-import { ArrowRightIcon, GithubIcon } from '@/components/icons/Icons';
+import { GithubIcon, InstagramIcon, XIcon } from '@/components/icons/Icons';
 
 export function Hero() {
   return (
     <section className="hero" id="hero">
       <div className="hero-inner">
-        <div>
-          <div className="hero-status">
-            <span className="dot" aria-hidden="true" />
-            System Online
-          </div>
-
-          <h1>
-            I'm Tuku.
-            <br />
-            I build things <span className="accent">that work.</span>
-            <span className="hero-dynamic" aria-live="polite">
-              <span className="role-text">Vibe Coder</span>
-            </span>
-          </h1>
-
-          <p className="hero-desc">
-            Self-taught developer building bots, apps, APIs, automation systems and
-            experimental software.
-          </p>
-
+        <div className="hero-copy">
+          <div className="hero-status"><span className="dot" aria-hidden="true"/> Independent developer · India</div>
+          <h1>Hey, I’m Tuku.<br/><span className="accent">I build useful things.</span></h1>
+          <p className="hero-desc">Self-taught developer turning everyday problems into Android apps, backend systems and practical developer tools.</p>
           <div className="hero-ctas">
-            <MagneticButton href="#projects" variant="primary">
-              <span>Explore Projects</span>
-              <ArrowRightIcon size={14} />
-            </MagneticButton>
-            <MagneticButton
-              href="https://github.com/tukuexe"
-              external
-              variant="secondary"
-              ariaLabel="Open GitHub profile"
-            >
-              <GithubIcon size={14} />
-              GitHub
-            </MagneticButton>
+            <a href="#projects" className="btn-primary">Explore my work</a>
+            <a href="https://github.com/realximanta" target="_blank" rel="noopener noreferrer" className="btn-secondary"><GithubIcon size={16}/> GitHub</a>
           </div>
-
           <div className="hero-socials">
-            <a href="https://github.com/tukuexe" target="_blank" rel="noopener noreferrer">
-              <GithubIcon size={12} />
-              @tukuexe
-            </a>
-            <a href="https://github.com/realximanta" target="_blank" rel="noopener noreferrer">
-              <GithubIcon size={12} />
-              @realximanta
-            </a>
-            <a href="https://github.com/realtuku" target="_blank" rel="noopener noreferrer">
-              <GithubIcon size={12} />
-              @realtuku
-            </a>
+            <a href="https://www.instagram.com/iximanta/" target="_blank" rel="noopener noreferrer"><InstagramIcon size={16}/> @iximanta</a>
+            <a href="https://x.com/realximanta" target="_blank" rel="noopener noreferrer"><XIcon size={15}/> @realximanta</a>
           </div>
         </div>
-
-        <div className="hero-terminal" role="region" aria-label="Terminal status panel">
-          <div className="terminal-bar">
-            <div className="terminal-dots" aria-hidden="true">
-              <span /><span /><span />
-            </div>
-            <span className="terminal-title">tuku@dev ~ status</span>
+        <aside className="hero-panel" aria-label="Developer profile">
+          <div className="profile-top">
+            <a className="profile-avatar" href="https://github.com/realximanta" target="_blank" rel="noopener noreferrer"><img src="https://avatars.githubusercontent.com/u/288851433?v=4" alt="GitHub avatar of realximanta" width="64" height="64" /></a>
+            <div><div className="profile-name">Tuku / Ximanta</div><a className="text-link" href="https://github.com/realximanta" target="_blank" rel="noopener noreferrer">@realximanta</a></div>
           </div>
-          <div className="terminal-body">
-            <div className="terminal-line">
-              <span className="t-prompt">╭─[</span>
-              <span className="t-cmd">tuku@dev</span>
-              <span className="t-prompt"> ~ ]</span>
-            </div>
-            <div className="terminal-line"><span className="t-prompt">│</span></div>
-            <div className="terminal-line"><span className="t-prompt">│ $</span> <span className="t-cmd">whoami</span></div>
-            <div className="terminal-line t-output">Tuku</div>
-            <div className="terminal-line"><span className="t-prompt">│</span></div>
-            <div className="terminal-line"><span className="t-prompt">│ $</span> <span className="t-cmd">role</span></div>
-            <div className="terminal-line t-output"><span className="hl">Vibe Coder</span> / Builder</div>
-            <div className="terminal-line"><span className="t-prompt">│</span></div>
-            <div className="terminal-line"><span className="t-prompt">│ $</span> <span className="t-cmd">focus</span></div>
-            <div className="terminal-line t-output">Bots • APIs • Android • Automation</div>
-            <div className="terminal-line"><span className="t-prompt">│</span></div>
-            <div className="terminal-line"><span className="t-prompt">│ $</span> <span className="t-cmd">status</span></div>
-            <div className="terminal-line t-output"><span className="hl-violet">Building...</span></div>
-            <div className="terminal-line"><span className="t-prompt">│</span></div>
-            <div className="terminal-line">
-              <span className="t-prompt">╰──➤</span>
-            </div>
-          </div>
-        </div>
+          <div className="profile-metrics"><div><strong>09</strong><span>Featured projects</span></div><div><strong>10</strong><span>Selected repositories</span></div></div>
+          <div className="profile-focus"><span>Building across</span><div><b>Android</b><b>Backend</b><b>Developer tools</b></div></div>
+          <div className="profile-quote">Build. Learn. Ship. Repeat.</div>
+        </aside>
       </div>
     </section>
   );
