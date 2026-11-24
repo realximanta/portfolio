@@ -42,7 +42,7 @@ Engineering: APIs, Automation, Bots, Serverless, Deployment, Debugging, CLI tool
 NOW  — Building systems, understanding architecture, shipping`,
   contact: `GitHub:   github.com/tukuexe
 Telegram: t.me/codex_storebot
-Website:  about.ximanta.xyz`,
+Website:  www.ximanta.xyz`,
 };
 
 const escapeHtml = (str: string): string => {

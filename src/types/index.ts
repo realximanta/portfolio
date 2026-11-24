@@ -47,11 +47,3 @@ export interface ContactLink {
   url: string;
   icon: 'github' | 'telegram' | 'web';
 }
-
-export type RoleType =
-  | 'Vibe Coder'
-  | 'Telegram Bot Developer'
-  | 'Android Developer'
-  | 'Automation Builder'
-  | 'API Explorer'
-  | 'Digital Architect';

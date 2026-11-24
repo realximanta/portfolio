@@ -1,20 +1,7 @@
-import { useTypewriter } from '@/hooks/useTypewriter';
 import { MagneticButton } from '@/components/ui/MagneticButton';
 import { ArrowRightIcon, GithubIcon } from '@/components/icons/Icons';
-import type { RoleType } from '@/types';
-
-const ROLES: readonly RoleType[] = [
-  'Vibe Coder',
-  'Telegram Bot Developer',
-  'Android Developer',
-  'Automation Builder',
-  'API Explorer',
-  'Digital Architect',
-];
 
 export function Hero() {
-  const role = useTypewriter(ROLES);
-
   return (
     <section className="hero" id="hero">
       <div className="hero-inner">
@@ -29,7 +16,7 @@ export function Hero() {
             <br />
             I build things <span className="accent">that work.</span>
             <span className="hero-dynamic" aria-live="polite">
-              <span className="role-text">{role}</span>
+              <span className="role-text">Vibe Coder</span>
             </span>
           </h1>
 
@@ -97,7 +84,7 @@ export function Hero() {
             <div className="terminal-line t-output"><span className="hl-violet">Building...</span></div>
             <div className="terminal-line"><span className="t-prompt">│</span></div>
             <div className="terminal-line">
-              <span className="t-prompt">╰──➤</span> <span className="t-cursor" aria-hidden="true" />
+              <span className="t-prompt">╰──➤</span>
             </div>
           </div>
         </div>

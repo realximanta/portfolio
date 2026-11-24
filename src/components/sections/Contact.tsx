@@ -19,8 +19,8 @@ const CONTACT_LINKS = [
   },
   {
     label: 'Website',
-    value: 'about.ximanta.xyz',
-    url: 'https://about.ximanta.xyz',
+    value: 'www.ximanta.xyz',
+    url: 'https://www.ximanta.xyz',
     icon: 'web' as const,
   },
 ];

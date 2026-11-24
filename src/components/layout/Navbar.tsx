@@ -34,7 +34,6 @@ export function Navbar({ onToggleMenu, menuOpen }: NavbarProps) {
       <div className="nav-inner">
         <a href="#hero" className="nav-logo" aria-label="Tuku home">
           <span className="prompt">~/</span>tuku
-          <span className="cursor-block" aria-hidden="true" />
         </a>
 
         <div className="nav-links">
